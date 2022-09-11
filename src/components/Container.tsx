@@ -42,7 +42,7 @@ const Container: React.FC = () => {
         }
         setComparedBreedIds(copyComparedBreedIds);
     }
-    return <View marginBottom={60}>
+    return <View marginBottom={60} data-testid="container">
         {loading ? <ProgressCircle aria-label="Loading…" isIndeterminate /> : <><CompareDialog breeds={breeds} comparedBreedIds={comparedBreedIds} />
             <Flex direction="row" gap="size-100" justifyContent="center" wrap columnGap={50} UNSAFE_className="container">{breeds.map((breed, idx) => (
                 <BreedCard breed={breed} comparedBreedIds={comparedBreedIds} key={idx} toggleSelect={toggleSelect} />

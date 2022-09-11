@@ -22,7 +22,7 @@ const CompareDialog: React.FC<CompareDialogPropsType> = (props) => {
             <Content>
               <Flex direction="row" justifyContent="space-evenly" >
                 {
-                  comparedBreeds.map((breed: BreedType, idx: number) => (
+                  comparedBreeds.map((breed: BreedType) => (
                     <BreedCardColumn breed={breed} key={`${breed.id}_BreedCardColumn`} />))}
               </Flex>
             </Content>

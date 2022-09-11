@@ -33,5 +33,5 @@ export type ImageType = {
     breed: BreedType; 
     comparedBreedIds: number[]; 
     toggleSelect: Function, 
-    idx: number;
+    idx?: number;
   }

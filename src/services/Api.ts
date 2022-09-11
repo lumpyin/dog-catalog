@@ -1,4 +1,4 @@
-export const fetchBreeds = async ( page = 0,limit = 10) => {
+export const fetchBreeds = async (page:number = 0,limit:number = 10) => {
     
     try{
         const response = await fetch(`https://api.thedogapi.com/v1/breeds?limit=${ limit }&page=${ page }`);
