@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex, View, Checkbox, DialogTrigger, ActionButton, Dialog, Heading, Divider, Content, Footer, ButtonGroup, Button, Image, Text } from "@adobe/react-spectrum";
+import { Flex, View, Checkbox, DialogTrigger, ActionButton, Dialog, Heading, Divider, Content, Image, Text } from "@adobe/react-spectrum";
 import BreedCardColumn from './BreedCardColumn';
 import { usePress } from 'react-aria';
 
