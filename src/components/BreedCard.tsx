@@ -6,9 +6,8 @@ import { BreedCardPropsType } from '../types'
 
 const BreedCard: React.FC<BreedCardPropsType> = (props) => {
     const { breed, comparedBreedIds, toggleSelect } = props;
-    let { pressProps } = usePress({
-        onPress: (e) => {
-            console.log(breed.id)
+    const { pressProps } = usePress({
+        onPress: () => {
             toggleSelect(breed.id)
         }
     });
@@ -26,7 +25,7 @@ const BreedCard: React.FC<BreedCardPropsType> = (props) => {
                 </Checkbox>
                 <DialogTrigger isDismissable>
                     <ActionButton>See Details</ActionButton>
-                    {(close) => (
+                    {() => (
                         <Dialog>
                             <Heading>
                                 <Flex alignItems="center" gap="size-100">

@@ -1,26 +1,18 @@
-import { Flex, Text, Image, Divider } from "@adobe/react-spectrum";
+import { Flex, Image } from "@adobe/react-spectrum";
 import { BreedCardColumnPropsType } from "../types";
-
+import TextWithDivider from "./TextWithDivider";
 const BreedCardColumn: React.FC<BreedCardColumnPropsType> = (props) => {
   const { breed } = props;
   return (
     <Flex direction="column" gap="size-125" alignContent="center" key={breed.id} flex="1">
-      <Text>Bred Name: {breed.name}</Text>
-      <Divider size="S" />
-      <Text>Height: {breed.height.metric}</Text>
-      <Divider size="S" />
-      <Text>Weight: {breed.weight.metric}</Text>
-      <Divider size="S" />
-      <Text>Bred For: {breed.bred_for}</Text>
-      <Divider size="S" />
-      <Text>Life Span: {breed.life_span}</Text>
-      <Divider size="S" />
-      <Text>Origin: {breed.origin}</Text>
-      <Divider size="S" />
-      <Text>Temperament: {breed.temperament}</Text>
-      <Divider size="S" />
-      <Text>Bred Name: {breed.name}</Text>
-      <Divider size="S" />
+      <TextWithDivider name={'Bred Name'} text={breed.name} />
+      <TextWithDivider name={'Height'} text={breed.height.metric} />
+      <TextWithDivider name={'Weight'} text={breed.weight.metric} />
+      <TextWithDivider name={'Bred For'} text={breed.bred_for} />
+      <TextWithDivider name={'Life Span'} text={breed.life_span} />
+      <TextWithDivider name={'Origin'} text={breed.origin} />
+      <TextWithDivider name={'Temperament'} text={breed.temperament} />
+      <TextWithDivider name={'Bred Name'} text={breed.name} />
       <Image src={breed.image.url} alt={breed.name} objectFit="cover" maxWidth="100%" />
     </Flex>
   )

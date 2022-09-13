@@ -32,6 +32,6 @@ export type ImageType = {
   export type BreedCardPropsType = {
     breed: BreedType; 
     comparedBreedIds: number[]; 
-    toggleSelect: Function, 
+    toggleSelect: (breedId:number) => void, 
     idx?: number;
   }

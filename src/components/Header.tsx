@@ -1,8 +1,8 @@
 import React from 'react';
-import { Flex } from '@adobe/react-spectrum';
+import { Flex, Text } from '@adobe/react-spectrum';
 
 const Header: React.FC = () => {
-    return <Flex height={70} justifyContent="center" alignItems="center">Dog Catalog</Flex>;
+    return <Flex height={70} justifyContent="center" alignItems="center"><Text>Dog Catalog</Text></Flex>;
 };
 
 export default Header;

@@ -7,7 +7,7 @@ const CompareDialog: React.FC<CompareDialogPropsType> = (props) => {
   return (
     <DialogTrigger isDismissable>
       <ActionButton isDisabled={comparedBreedIds.length <= 1} margin="40px">Show Compared Breeds</ActionButton>
-      {(close) => {
+      {() => {
         const comparedBreeds = breeds.filter((breed: BreedType) => comparedBreedIds.includes(breed.id));
         return (
           <Dialog >
